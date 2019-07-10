@@ -1,10 +1,9 @@
 
 $(document).ready(function(){
    // readTextFile("file:///C:/ckcore.txt")
-    GetHeader();
+    GetData();
 });
-
-function GetHeader() {
+function GetData() {
     //var file = document.querySelector("fileName");
    // alert(file.files[0]);
     var data = "AETG#&Telcordia#&1994#&#&Commercial#&#&Cross#&Web APP#&Greedy (OTAT)#&2, 3, n#&Y#&Y#&#&#&#&#& #&Y#&Forbidden tuple#&#&#&#&负面测试#&#&#&[1] The Automatic Efficient Tests Generator (AETG) System [2] The AETG System: An Approach to Testing Based on Combinatorial Design#&The website is not avaiable now.\n" +
@@ -95,7 +94,9 @@ function GetHeader() {
         "pairwise_test_case_generator#&[ryiwamoto]#&2018#&2018#&open source#&TypeScript#&Cross#&Web APP#&Greedy (OTAT)#&2#&#&#&#&#&#&#&#&#&#&#&#&#&生成json格式测试用例#&2条commit记录#&https://github.com/ryiwamoto/pairwise_test_case_generator#&#&\n" +
         "jpwise#&[Davydov]#&2018#&2019#&open source#&Java#&Cross#&Library#&OTAT#&2, n#&#&#&#&#&#&#&源码#&Y#&boolean formula#&#&#&#&#&6条commit记录#&https://github.com/mike-d-davydov/jpwise#&#&\n" +
         "one-wise#&[Pinto]#&2018#&2018#&open source#&JavaScript#&Cross#&Library#&OTAT#&1#&#&#&#&#&#&#&源码#&#&#&#&#&#&#&19条commit记录#&https://github.com/thiagodp/one-wise#&#&";
-    var tools = data.split("\n");
-    alert(tools[1]);
+  //  var tools = data.split("\n");
+    window.localStorage.setItem("tools",data);
+   // alert(tools[1]);
 }
+
 
