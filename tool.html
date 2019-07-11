@@ -6,7 +6,8 @@
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 </head>
 <body>
-<div style="text-align: left;margin-bottom: 30px"><h2 style="font-size: 30px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">Tool </stronger> detail information</h2></div>
+<div style="text-align: left;margin-bottom: 30px;margin-left: 40px"><h2 style="font-size: 30px">Tool's detail information</h2></div>
+<div style="margin-left: 40px;" id="saveDiv"><a id="saveFile">download</a></div>
 <div class="row" style="margin-left: 60px">
     <div style="text-align: left;margin-bottom: 20px"><h2 style="font-size: 30px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">Basic information </stronger></h2></div>
     <div style="width: 50%; float: left;margin-bottom:10px;">
@@ -38,12 +39,12 @@
         <input type="text" id="programLanguage" disabled style="width: 280px">
     </div>
 
-    <div style="width: 50%; float: left;margin-bottom:10px;">
+    <div style="width: 50%; float: left;margin-bottom:40px;">
         <span style="display: inline-block;width: 200px">Platform: </span>
         <input type="text" id="platform" disabled style="width: 280px">
     </div>
 
-    <div style="width: 50%; float: left;margin-bottom:10px;">
+    <div style="width: 50%; float: left;margin-bottom:40px;">
         <span style="display: inline-block;width: 200px">User interface: </span>
         <input type="text" id="interface" disabled style="width: 280px">
     </div>
@@ -59,16 +60,16 @@
         <input type="text" id="strength" disabled style="width: 280px">
     </div>
 
-    <div style="width: 50%; float: left;margin-bottom:10px;">
+    <div style="width: 50%; float: left;margin-bottom:40px;">
         <span style="display: inline-block;width: 200px">Variable strength: </span>
         <input type="text" id="vssupport" disabled style="width: 280px">
     </div>
 
-    <div style="width: 50%; float: left;margin-bottom:10px;">
+    <div style="width: 50%; float: left;margin-bottom:40px;">
         <span style="display: inline-block;width: 200px">Seeding: </span>
         <input type="text" id="seed" disabled style="width: 280px">
     </div>
-    <div style="text-align: left;margin-bottom: 20px"><h2 style="font-size: 30px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">Other testing activity </stronger></h2></div>
+    <div style="text-align: left;margin-bottom: 20px"><h2 style="font-size: 30px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">Other testing activities </stronger></h2></div>
 
     <div style="width: 50%; float: left;margin-bottom:10px;">
         <span style="display: inline-block;width: 200px;float: left;margin-top: 20px;">Optimization: </span>
@@ -80,16 +81,16 @@
         <textarea id="execution" disabled rows="4" cols="40"></textarea>
     </div>
 
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px;float: left;margin-top: 20px;">Evaluation: </span>
+    <div style="width: 50%; float: left;margin-bottom:40px;">
+        <span style="display: inline-block;width: 200px;float: left;margin-top: 20px;">Coverage evaluation: </span>
         <textarea id="evaluation" disabled rows="4" cols="40"></textarea>
     </div>
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px;float: left;margin-top: 20px;">Fault location: </span>
+    <div style="width: 50%; float: left;margin-bottom:40px;">
+        <span style="display: inline-block;width: 200px;float: left;margin-top: 20px;">Fault diagnosis: </span>
         <textarea id="faultLocation" disabled rows="4" cols="40"></textarea>
     </div>
 
-    <div style="text-align: left;margin-bottom: 20px"><h2 style="font-size: 30px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">Input and output </stronger></h2></div>
+    <div style="text-align: left;margin-bottom: 20px"><h2 style="font-size: 30px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">I/O </stronger></h2></div>
     <div style="width: 50%; float: left;margin-bottom:10px;">
         <span style="display: inline-block;width: 200px">Modeling language: </span>
         <input type="text" id="modelingLanguage" disabled style="width: 280px">
@@ -106,17 +107,17 @@
         <span style="display: inline-block;width: 200px">Constraint validation: </span>
         <input type="text" id="constraintValidation" disabled style="width: 280px">
     </div>
-    <div style="width: 50%; float: left;margin-bottom:10px;">
+    <div style="width: 50%; float: left;margin-bottom:40px;">
         <span style="display: inline-block;width: 200px">Output format: </span>
         <input type="text" id="outputFormat" disabled style="width: 280px">
     </div>
-    <div style="width: 50%; float: left;margin-bottom:10px;">
+    <div style="width: 50%; float: left;margin-bottom:40px;">
         <span style="display: inline-block;width: 200px;float: left;margin-top: 20px;">Compatibility with other tools: </span>
         <textarea id="compatibility" disabled rows="4" cols="40"></textarea>
     </div>
     <div style="text-align: left;margin-bottom: 20px"><h2 style="font-size: 30px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">Other </stronger></h2></div>
     <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px;float: left;margin-top: 20px;">Other functions: </span>
+        <span style="display: inline-block;width: 200px;float: left;margin-top: 20px;">Other supported functions: </span>
         <textarea id="otherFunc" disabled rows="4" cols="40"></textarea>
     </div>
 

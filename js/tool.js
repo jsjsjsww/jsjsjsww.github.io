@@ -39,4 +39,14 @@ $(document).ready(function() {
     document.getElementById("papers").value = info[25];
     document.getElementById("caption").value = info[26];
 
+    var unusable = ["0","2","5","6","11","12","13","16","18","19","23","24","30","31","32","33","36","37","41","43","44","46","48","50","53","58","67","83"];
+    if(unusable.indexOf(id) != -1){
+        document.getElementById("saveDiv").style.display="none";
+    }
+    else {
+        var a = document.getElementById("saveFile");
+        a.href = "data/" + id + ".docx";
+        a.download = info[0] + ".docx";
+    }
+
 });
