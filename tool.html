@@ -4,145 +4,126 @@
     <meta charset="UTF-8">
     <title>Tool's Detail Information</title>
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-<div style="text-align: left;margin-bottom: 30px;margin-left: 40px"><h2 style="font-size: 30px">Tool's detail information</h2></div>
-<div style="margin-left: 40px;" id="saveDiv">download <a id="saveFile">use report</a></div>
+<div style="text-align: left;margin-bottom: 30px;margin-left: 40px"><h2 style="font-size: 30px">工具详细信息</h2></div>
+<div style="margin-left: 40px;" id="saveDiv">下载 <a id="saveFile">使用报告</a></div>
 <div class="row" style="margin-left: 60px">
-    <div style="text-align: left;margin-bottom: 20px"><h2 style="font-size: 30px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">Basic information </stronger></h2></div>
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px">Name: </span>
-            <input type="text" id="toolName" disabled style="width: 280px">
+    <div style="text-align: left;margin-bottom: 20px"><h2 style="font-size: 30px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">基本信息 </stronger></h2></div>
+    <div style="width: 50%; float: left;margin-bottom:10px;" id="toolName">
     </div>
 
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px">Developer: </span>
-        <input type="text" id="developer" disabled style="width: 280px">
+    <div style="width: 50%; float: left;margin-bottom:10px;" id="developer">
     </div>
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px">Release time: </span>
-        <input type="text" id="releaseTime" disabled style="width: 280px">
+    <div style="width: 50%; float: left;margin-bottom:10px;" id="releaseTime">
     </div>
 
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px">Last update time: </span>
-        <input type="text" id="lastUpdateTime" disabled style="width: 280px">
+    <div style="width: 50%; float: left;margin-bottom:10px;" id="lastUpdateTime">
+    </div>
+    <div style="width: 50%; float: left;margin-bottom:10px;" id="papers">
+    </div>
+    <div style="width: 50%; float: left;margin-bottom:10px;" id="illustration">
     </div>
 
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px">Business model: </span>
-        <input type="text" id="businessModel" disabled style="width: 280px">
+    <div class="clearfix" ></div>
+    <div style="text-align: left;margin-bottom: 20px"><h2 style="font-size: 30px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">研究问题1相关 </stronger></h2></div>
+    <div style="width: 50%; float: left;margin-bottom:10px;" id="businessModel">
     </div>
 
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px">Programming language: </span>
-        <input type="text" id="programLanguage" disabled style="width: 280px">
+    <div style="width: 50%; float: left;margin-bottom:10px;" id="programLanguage">
     </div>
 
-    <div style="width: 50%; float: left;margin-bottom:40px;">
-        <span style="display: inline-block;width: 200px">Platform: </span>
-        <input type="text" id="platform" disabled style="width: 280px">
+    <div style="width: 50%; float: left;margin-bottom:10px;" id="platform">
     </div>
 
-    <div style="width: 50%; float: left;margin-bottom:40px;">
-        <span style="display: inline-block;width: 200px">User interface: </span>
-        <input type="text" id="interface" disabled style="width: 280px">
+    <div style="width: 50%; float: left;margin-bottom:10px;" id="interface">
     </div>
 
-    <div style="text-align: left;margin-bottom: 20px"><h2 style="font-size: 30px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">Generation </stronger></h2></div>
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px">Algorithm: </span>
-        <input type="text" id="algorithm" disabled style="width: 280px">
+    <div style="width: 50%; float: left;margin-bottom:20px;" id="functions">
     </div>
 
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px">Strength: </span>
-        <input type="text" id="strength" disabled style="width: 280px">
+
+
+
+
+<div class="clearfix" ></div>
+    <div style="text-align: left;margin-bottom: 20px"><h2 style="font-size: 30px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">研究问题2相关 </stronger></h2></div>
+    <div id="gen">
+    <div style="text-align: left;margin-bottom: 20px;"><h2 style="font-size: 20px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">测试用例生成 </stronger></h2></div>
+    <div style="width: 50%; float: left;margin-bottom:10px;" id="algorithm">
     </div>
 
-    <div style="width: 50%; float: left;margin-bottom:40px;">
-        <span style="display: inline-block;width: 200px">Variable strength: </span>
-        <input type="text" id="vssupport" disabled style="width: 280px">
+    <div style="width: 50%; float: left;margin-bottom:10px;" id="maxStrength">
+    </div>
+    <div style="width: 50%; float: left;margin-bottom:10px;" id="constraintSupport">
+    </div>
+    <div style="width: 50%; float: left;margin-bottom:10px;" id="constraintExpress">
+    </div>
+    <div style="width: 50%; float: left;margin-bottom:10px;" id="constraintCheck">
+    </div>
+        <div style="width: 50%; float: left;margin-bottom:10px;" id="varStrength">
+        </div>
+        <div style="width: 50%; float: left;margin-bottom:10px;" id="seeds">
+        </div>
+    </div>
+    <div class="clearfix" ></div>
+    <div id="opti">
+        <div style="text-align: left;margin-bottom: 20px;"><h2 style="font-size: 20px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">测试用例优化 </stronger></h2></div>
+        <div style="width: 50%; float: left;margin-bottom:10px;" id="optimization">
+        </div>
+    </div>
+    <div class="clearfix" ></div>
+    <div id="exe">
+        <div style="text-align: left;margin-bottom: 20px;"><h2 style="font-size: 20px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">测试用例执行 </stronger></h2></div>
+        <div style="width: 50%; float: left;margin-bottom:10px;" id="execution">
+        </div>
+    </div>
+    <div class="clearfix" ></div>
+    <div id="faultLocate">
+        <div style="text-align: left;margin-bottom: 20px;"><h2 style="font-size: 20px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">故障诊断 </stronger></h2></div>
+        <div style="width: 50%; float: left;margin-bottom:10px;" id="faultLoc">
+        </div>
+    </div>
+    <div class="clearfix" ></div>
+    <div id="evaluate">
+        <div style="text-align: left;margin-bottom: 20px;"><h2 style="font-size: 20px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">测试评估 </stronger></h2></div>
+        <div style="width: 50%; float: left;margin-bottom:10px;" id="evaluation">
+        </div>
+    </div>
+    <div class="clearfix" ></div>
+    <div id="otherFunc">
+        <div style="text-align: left;margin-bottom: 20px;"><h2 style="font-size: 20px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">其他组合测试功能 </stronger></h2></div>
+        <div style="width: 50%; float: left;margin-bottom:10px;" id="otherFuncs">
+        </div>
     </div>
 
-    <div style="width: 50%; float: left;margin-bottom:40px;">
-        <span style="display: inline-block;width: 200px">Seeding: </span>
-        <input type="text" id="seed" disabled style="width: 280px">
-    </div>
-    <div style="text-align: left;margin-bottom: 20px"><h2 style="font-size: 30px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">Other testing activities </stronger></h2></div>
-
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px;float: left;margin-top: 20px;">Optimization: </span>
-        <textarea id="optimization" disabled rows="4" cols="40"></textarea>
+    <div class="clearfix" ></div>
+    <div style="text-align: left;margin-bottom: 20px"><h2 style="font-size: 30px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">研究问题3相关 </stronger></h2></div>
+    <div style="width: 50%; float: left;margin-bottom:10px;" id="outFormat">
     </div>
 
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px;float: left;margin-top: 20px;">Execution: </span>
-        <textarea id="execution" disabled rows="4" cols="40"></textarea>
+    <div style="width: 50%; float: left;margin-bottom:10px;" id="modelLanguage">
     </div>
 
-    <div style="width: 50%; float: left;margin-bottom:40px;">
-        <span style="display: inline-block;width: 200px;float: left;margin-top: 20px;">Coverage evaluation: </span>
-        <textarea id="evaluation" disabled rows="4" cols="40"></textarea>
-    </div>
-    <div style="width: 50%; float: left;margin-bottom:40px;">
-        <span style="display: inline-block;width: 200px;float: left;margin-top: 20px;">Fault diagnosis: </span>
-        <textarea id="faultLocation" disabled rows="4" cols="40"></textarea>
+    <div style="width: 50%; float: left;margin-bottom:10px;" id="formalize">
     </div>
 
-    <div style="text-align: left;margin-bottom: 20px"><h2 style="font-size: 30px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">I/O </stronger></h2></div>
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px">Modeling language: </span>
-        <input type="text" id="modelingLanguage" disabled style="width: 280px">
-    </div>
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px">Constraint support: </span>
-        <input type="text" id="constraint" disabled style="width: 280px">
-    </div>
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px">Constraint representation: </span>
-        <input type="text" id="constraintExpress" disabled style="width: 280px">
-    </div>
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px">Constraint validation: </span>
-        <input type="text" id="constraintValidation" disabled style="width: 280px">
-    </div>
-    <div style="width: 50%; float: left;margin-bottom:40px;">
-        <span style="display: inline-block;width: 200px">Output format: </span>
-        <input type="text" id="outputFormat" disabled style="width: 280px">
-    </div>
-    <div style="width: 50%; float: left;margin-bottom:40px;">
-        <span style="display: inline-block;width: 200px;float: left;margin-top: 20px;">Compatibility with other tools: </span>
-        <textarea id="compatibility" disabled rows="4" cols="40"></textarea>
-    </div>
-    <div style="text-align: left;margin-bottom: 20px"><h2 style="font-size: 30px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">Other </stronger></h2></div>
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px;float: left;margin-top: 20px;">Other supported functions: </span>
-        <textarea id="otherFunc" disabled rows="4" cols="40"></textarea>
+
+
+    <div class="clearfix" ></div>
+    <div style="text-align: left;margin-bottom: 20px"><h2 style="font-size: 30px"><stronger id="typeofService"style="color:#2c2255;font-weight: 700;">研究问题4相关 </stronger></h2></div>
+    <div style="width: 50%; float: left;margin-bottom:10px;" id="reversion">
     </div>
 
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px;float: left;margin-top: 20px;">Revision history: </span>
-        <textarea id="versions" disabled rows="4" cols="40"></textarea>
+    <div style="width: 50%; float: left;margin-bottom:10px;" id="updateFre">
     </div>
-
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px;float: left;margin-top: 20px;">Links: </span>
-        <textarea id="links" disabled rows="4" cols="40"></textarea>
-    </div>
-
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px;float: left;margin-top: 20px;">Related papers: </span>
-        <textarea id="papers" disabled rows="4" cols="40"></textarea>
-    </div>
-
-    <div style="width: 50%; float: left;margin-bottom:10px;">
-        <span style="display: inline-block;width: 200px;float: left;margin-top: 20px;">Captions: </span>
-        <textarea id="caption" disabled rows="4" cols="40"></textarea>
-    </div>
-
 
 </div>
+
+
+
+
 <script src="js/tool.js"></script>
 <script src="js/survey.js"></script>
 </body>

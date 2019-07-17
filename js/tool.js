@@ -7,39 +7,92 @@ $(document).ready(function() {
     //alert(tools[id]);
     var current = tools[id];
     var info = current.split("#&");
-    document.getElementById("toolName").value = info[0];
-    document.getElementById("developer").value = info[1];
-    document.getElementById("releaseTime").value = info[2];
-    document.getElementById("lastUpdateTime").value = info[3];
-    document.getElementById("businessModel").value = info[4];
-    document.getElementById("programLanguage").value = info[5];
-    document.getElementById("platform").value = info[6];
-    document.getElementById("interface").value = info[7];
+    //document.getElementById("toolName").value = info[0];
+    document.getElementById("toolName").innerHTML = " <span style=\"display: inline-block;width: 150px\"><strong>工具名称</strong>: </span><span>" + (info[29]==""?info[0]:"<a href="+ info[29]+">" + info[0] + "</a>") +"</span>";
+    document.getElementById("developer").innerHTML = "<span style=\"display: inline-block;width: 150px\"><strong>开发者</strong>: </span><span>" + info[1] +"</span>";
+    document.getElementById("releaseTime").innerHTML = "<span style=\"display: inline-block;width: 150px\"><strong>发布时间</strong>: </span><span>" + (info[2]==""?"无":info[2]) +"</span>";
+    document.getElementById("lastUpdateTime").innerHTML = "<span style=\"display: inline-block;width: 150px\"><strong>最近更新时间</strong>: </span><span>" + (info[3]==""?"无":info[3]) +"</span>";
+    if(info[30]!="")
+        document.getElementById("papers").innerHTML = "<span style=\"display: inline-block;width: 150px;float: left;margin-top: 20px;\"><strong>相关论文</strong>: </span><textarea style=\"background: white;resize:none;\" disabled rows=\"4\" cols=\"40\">" + info[30] +"</textarea>";
+    else
+        document.getElementById("papers").style.display="none";
+    if(info[31] != "")
+        document.getElementById("illustration").innerHTML = "<span style=\"display: inline-block;width: 150px;float: left;margin-top: 20px;\"><strong>其他</strong>: </span><textarea style=\"background: white;resize:none;\" disabled rows=\"4\" cols=\"40\">" + info[31] +"</textarea>";
 
-    document.getElementById("algorithm").value = info[8];
-    document.getElementById("strength").value = info[9];
-    document.getElementById("vssupport").value = info[10];
-    document.getElementById("seed").value = info[11];
+    document.getElementById("businessModel").innerHTML = "<span style=\"display: inline-block;width: 150px\"><strong>商业模式</strong>: </span><span>" + (info[4]==""?"无":info[4]) +"</span>";
+    document.getElementById("programLanguage").innerHTML = "<span style=\"display: inline-block;width: 150px\"><strong>编程语言</strong>: </span><span>" + (info[5]==""?"无":info[5]) +"</span>";
+    document.getElementById("platform").innerHTML = "<span style=\"display: inline-block;width: 150px\"><strong>平台依赖</strong>: </span><span>" + (info[6]==""?"无":info[6]) +"</span>";
+    document.getElementById("interface").innerHTML = "<span style=\"display: inline-block;width: 150px\"><strong>交互方式</strong>: </span><span>" + (info[7]==""?"无":info[7]) +"</span>";
+    document.getElementById("functions").innerHTML = "<span style=\"display: inline-block;width: 150px\"><strong>组合测试功能</strong>: </span><span>" + (info[8]==""?"无":info[8]) +"</span>";
 
-    document.getElementById("optimization").value = info[12];
-    document.getElementById("execution").value = info[13];
-    document.getElementById("evaluation").value = info[14];
-    document.getElementById("faultLocation").value = info[15];
+    if(info[9]=="") //不是生成
+        document.getElementById("gen").style.display="none";
+    else{
+        document.getElementById("algorithm").innerHTML = "<span style=\"display: inline-block;width: 150px\"><strong>生成算法</strong>: </span><span>" + (info[9]==""?"无":info[9]) +"</span>";
+        document.getElementById("maxStrength").innerHTML = "<span style=\"display: inline-block;width: 150px\"><strong>最大支持维度</strong>: </span><span>" + (info[11]==""?"无":info[11]) +"</span>";
+        document.getElementById("constraintSupport").innerHTML = "<span style=\"display: inline-block;width: 150px\"><strong>约束支持</strong>: </span><span>" + (info[21]==""?"无":info[21]) +"</span>";
+        if(info[21]=="支持"){
+            document.getElementById("constraintExpress").innerHTML = "<span style=\"display: inline-block;width: 150px\"><strong>约束表达方式</strong>: </span><span>" + (info[22]==""?"无":info[22]) +"</span>";
+            document.getElementById("constraintCheck").innerHTML = "<span style=\"display: inline-block;width: 150px\"><strong>约束检查</strong>: </span><span>" + (info[23]==""?"无":info[23]) +"</span>";
+        }
+        else{
+            document.getElementById("constraintExpress").style.display="none";
+            document.getElementById("constraintCheck").style.display="none";
+        }
 
-    document.getElementById("modelingLanguage").value = info[16];
-    document.getElementById("constraint").value = info[17];
-    document.getElementById("constraintExpress").value = info[18];
-    document.getElementById("constraintValidation").value = info[19];
-    document.getElementById("outputFormat").value = info[20];
-    document.getElementById("compatibility").value = info[21];
+        document.getElementById("varStrength").innerHTML = "<span style=\"display: inline-block;width: 150px\"><strong>可变力度支持</strong>: </span><span>" + (info[12]==""?"无":info[12]) +"</span>";
+        document.getElementById("seeds").innerHTML = "<span style=\"display: inline-block;width: 150px\"><strong>种子支持</strong>: </span><span>" + (info[13]==""?"无":info[13]) +"</span>";
 
-    document.getElementById("otherFunc").value = info[22];
-    document.getElementById("versions").value = info[23];
-    document.getElementById("links").value = info[24];
-    document.getElementById("papers").value = info[25];
-    document.getElementById("caption").value = info[26];
 
-    var unusable = ["0","2","5","6","11","12","13","16","18","19","23","24","30","31","32","33","36","37","41","43","44","46","48","50","53","58","67","83"];
+    }
+
+    if(info[14] == ""){
+        document.getElementById("opti").style.display="none";
+    }
+    else{
+        document.getElementById("optimization").innerHTML="<span style=\"display: inline-block;width: 150px;float: left;margin-top: 20px;\"><strong>说明</strong>: </span><textarea style=\"background: white;resize:none;\" disabled rows=\"4\" cols=\"40\">" + info[14] +"</textarea>";
+    }
+
+    if(info[15]=="" && info[16]==""){
+        document.getElementById("exe").style.display="none";
+    }
+    else{
+        document.getElementById("execution").innerHTML="<span style=\"display: inline-block;width: 150px;float: left;margin-top: 20px;\"><strong>说明</strong>: </span><textarea style=\"background: white;resize:none;\" disabled rows=\"4\" cols=\"40\">" + info[15] +"\r\n"+ info[16] + "</textarea>";
+    }
+
+    if(info[19]==""){
+        document.getElementById("faultLocate").style.display="none";
+    }
+    else{
+        document.getElementById("faultLoc").innerHTML="<span style=\"display: inline-block;width: 150px;float: left;margin-top: 20px;\"><strong>说明</strong>: </span><textarea style=\"background: white;resize:none;\" disabled rows=\"4\" cols=\"40\">" + info[19]  + "</textarea>";
+    }
+
+    if(info[18]==""){
+        document.getElementById("evaluate").style.display="none";
+    }
+    else{
+        document.getElementById("evaluation").innerHTML="<span style=\"display: inline-block;width: 150px;float: left;margin-top: 20px;\"><strong>说明</strong>: </span><textarea style=\"background: white;resize:none;\" disabled rows=\"4\" cols=\"40\">" + info[18]  + "</textarea>";
+    }
+
+    if(info[26]==""){
+        document.getElementById("otherFunc").style.display="none";
+    }
+    else{
+        document.getElementById("otherFuncs").innerHTML="<span style=\"display: inline-block;width: 150px;float: left;margin-top: 20px;\"><strong>说明</strong>: </span><textarea style=\"background: white;resize:none;\" disabled rows=\"4\" cols=\"40\">" + info[26]  + "</textarea>";
+    }
+
+    document.getElementById("outFormat").innerHTML="<span style=\"display: inline-block;width: 150px\"><strong>导出格式</strong>: </span><span>" + (info[24]==""?"无":info[24]) +"</span>";
+    document.getElementById("modelLanguage").innerHTML="<span style=\"display: inline-block;width: 150px\"><strong>建模语法</strong>: </span><span>" + (info[20]==""?"无":info[20]) +"</span>";
+
+    document.getElementById("formalize").innerHTML="<span style=\"display: inline-block;width: 150px;float: left;margin-top: 20px;\"><strong>形式化测试用例</strong>: </span><textarea style=\"background: white;resize:none;\" disabled rows=\"4\" cols=\"40\">" + (info[17]==""?"无":info[17])  + "</textarea>";
+
+    document.getElementById("reversion").innerHTML="<span style=\"display: inline-block;width: 150px;float: left;margin-top: 20px;\"><strong>演化历史</strong>: </span><textarea style=\"background: white;resize:none;\" disabled rows=\"4\" cols=\"40\">" + (info[27]==""?"无":info[27])  + "</textarea>";
+
+    document.getElementById("updateFre").innerHTML="<span style=\"display: inline-block;width: 150px\"><strong>更新频率</strong>: </span><span>" + (info[28]==""?"无":info[28]) +"</span>";
+
+
+
+    var unusable = ["0","2","5","6","11","12","13","16","18","19","23","24","30","31","32","33","36","37","41","43","44","46","48","50","53","58","67"];
     if(unusable.indexOf(id) != -1){
         document.getElementById("saveDiv").style.display="none";
     }
