@@ -17,7 +17,7 @@ $(document).ready(function() {
     else
         document.getElementById("papers").style.display="none";
     if(info[31] != "")
-        document.getElementById("illustration").innerHTML = "<span style=\"display: inline-block;width: 150px;float: left;margin-top: 20px;\"><strong>其他</strong>: </span><textarea style=\"background: white;resize:none;\" disabled rows=\"4\" cols=\"40\">" + info[31] +"</textarea>";
+        document.getElementById("illustration").innerHTML = "<span style=\"display: inline-block;width: 150px;float: left;margin-top: 20px;\"><strong>其他说明</strong>: </span><textarea style=\"background: white;resize:none;\" disabled rows=\"4\" cols=\"40\">" + info[31] +"</textarea>";
 
     document.getElementById("businessModel").innerHTML = "<span style=\"display: inline-block;width: 150px\"><strong>商业模式</strong>: </span><span>" + (info[4]==""?"无":info[4]) +"</span>";
     document.getElementById("programLanguage").innerHTML = "<span style=\"display: inline-block;width: 150px\"><strong>编程语言</strong>: </span><span>" + (info[5]==""?"无":info[5]) +"</span>";
