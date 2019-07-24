@@ -31,7 +31,7 @@ $(document).ready(function() {
     document.getElementById("releaseTime").innerHTML = "<span style=\"display: inline-block;width: 150px\"><strong>发布时间</strong>: </span><span>" + (info[2]==""?"无":info[2]) +"</span>";
     document.getElementById("lastUpdateTime").innerHTML = "<span style=\"display: inline-block;width: 150px\"><strong>最近更新时间</strong>: </span><span>" + (info[3]==""?"无":info[3]) +"</span>";
     if(info[30]!="") {
-        document.getElementById("papers").innerHTML = "<span style=\"display: inline-block;width: 150px;float: left;margin-top:20px;\"><strong>相关论文</strong>: </span><textarea style=\"border:0px;background: white;resize:none;\" disabled rows=\"4\" cols=\"40\">" + info[30] + "</textarea>";
+        document.getElementById("papers").innerHTML = "<span style=\"display: inline-block;width: 150px;float: left;margin-top:20px;\"><strong>相关论文</strong>: </span><textarea style=\"border:0px;background: white;resize:none;\" disabled rows=\"8\" cols=\"115\">" + info[30] + "</textarea>";
     }
         else
         document.getElementById("papers").style.display="none";
